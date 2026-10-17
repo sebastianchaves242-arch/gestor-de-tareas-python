@@ -1,0 +1,10 @@
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Configuración local
+.env
