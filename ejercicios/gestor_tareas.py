@@ -8,18 +8,19 @@ class GestorTareas:
         self.siguiente_id = 1
 
     def crear_tarea(self, nombre, desc):
-    
-        resultado = self.buscar_nombre_tarea(nombre)
-    
         if nombre.strip() == "":
             return "No puede ingresar una tarea vacia"
-        elif resultado is not None:
+
+        resultado = self.buscar_nombre_tarea(nombre)
+
+        if resultado is not None:
             return "Tarea ya existente"
-        else:
-            tarea = Tarea(self.siguiente_id, nombre, desc)
-            self.tareas.append(tarea)
-            self.siguiente_id += 1
-            print("Tarea creada correctamente.")
+
+        tarea = Tarea(self.siguiente_id, nombre, desc)
+        self.tareas.append(tarea)
+        self.siguiente_id += 1
+
+        return "Tarea ingresada correctamente"
 
     def listar_tareas(self):
         if not self.tareas:
