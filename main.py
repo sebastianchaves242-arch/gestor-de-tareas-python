@@ -13,7 +13,8 @@ def main():
         print("4. Actualizar tarea")
         print("5. Eliminar tarea")
         print("6. Completar tarea")
-        print("7. Salir")
+        print("7. Resumir tareas")
+        print("8. Salir")
 
         opcion = input("Seleccione una opción: ")
 
@@ -52,9 +53,12 @@ def main():
             gestor.completar_tarea(nombre)
 
         elif opcion == "7":
+            gestor.resumir_tareas()
+        
+        elif opcion == "8":
             print("Saliendo del programa...")
             break
-
+        
         else:
             print("Opción inválida.")
 
