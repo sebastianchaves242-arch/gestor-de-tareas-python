@@ -75,3 +75,17 @@ class GestorTareas:
                 print("La tarea ya está completada.")
         else:
             print("No se encontró la tarea.")
+
+    def resumir_tareas(self):
+        total_tareas = len(self.tareas)
+        contador_completadas = 0
+        contador_pendientes = 0
+        for tarea in self.tareas:
+            if tarea.completado:
+                contador_completadas += 1
+            else:
+                contador_pendientes += 1
+
+        print(f"Total de tareas: {total_tareas}")
+        print(f"Tareas completadas: {contador_completadas}")
+        print(f"Tareas pendientes: {contador_pendientes}")
