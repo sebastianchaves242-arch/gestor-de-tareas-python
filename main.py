@@ -1,6 +1,6 @@
 
 from ejercicios.gestor_tareas import GestorTareas
-
+import json
 
 def main():
     gestor = GestorTareas()

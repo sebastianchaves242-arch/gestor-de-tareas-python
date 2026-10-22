@@ -1,3 +1,4 @@
+import json
 
 class Tarea:
 
@@ -17,3 +18,15 @@ class Tarea:
 
     def marcarCompletado(self):
         self.completado = True
+
+    def convertirDiccionario(self):
+        tarea = {
+            "id": self.id, 
+            "nombre": self.nombre, 
+            "descripcion": self.desc, 
+            "completado": self.completado     
+        }
+        return tarea
+
+
+
